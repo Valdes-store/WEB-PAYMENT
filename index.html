@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Payment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Nomor pembayaran telah disalin: ' + text);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Pembayaran</h1>
+        <div class="payment-methods">
+            <div class="method">
+                <h2>Dana</h2>
+                <p>Nomor Dana: 082245820235</p>
+                <button onclick="copyToClipboard('082245820235')">Salin Nomor Pembayaran</button>
+            </div>
+            <div class="method">
+                <h2>GoPay</h2>
+                <p>Nomor GoPay: 082245820235</p>
+                <button onclick="copyToClipboard('082245820235')">Salin Nomor Pembayaran</button>
+            </div>
+            <div class="method">
+                <h2>OVO</h2>
+                <p>Nomor OVO: 085102419794</p>
+                <button onclick="copyToClipboard('085102419794')">Salin Nomor Pembayaran</button>
+            </div>
+            <div class="method">
+                <h2>QRIS</h2>
+                <img src="https://files.catbox.moe/p55s6e.jpeg" alt="QRIS" class="qris-image">
+                <p>Scan QRIS untuk pembayaran</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
